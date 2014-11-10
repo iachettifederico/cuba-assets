@@ -26,8 +26,8 @@ module Cuba::Assets
     environment.append_path "#{assets_dir}/fonts"
     environment.append_path "#{assets_dir}/images"
 
-    environment.js_compressor  = Cuba.settings[:environment][:js_compressor]
-    environment.css_compressor = Cuba.settings[:environment][:css_compressor]
+    environment.js_compressor  = Cuba.settings[:js_compressor]
+    environment.css_compressor = Cuba.settings[:css_compressor]
 
     environment
   end
