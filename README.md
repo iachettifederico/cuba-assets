@@ -44,6 +44,16 @@ Where `<assets_dir>` is, by default: `<app_dir>/assets`
 With that in place, you can now use the `asset` helper, passing the desired asset's path.
 This will return an instance of `Sprockets::BundledAsset`.
 
+## Configurations
+
+### Changing the assets directory
+
+To change the assets directory, just set it on the `settings` hash.
+
+```ruby
+Cuba.settings[:assets][:js_compressor]  = nil
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/cuba-assets/fork )
