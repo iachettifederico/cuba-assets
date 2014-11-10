@@ -2,6 +2,9 @@ require "pathname"
 require "sprockets"
 
 Cuba.settings[:assets_dir] = "assets/"
+
+Cuba.settings[:environment][:js_compressor]  = :uglify
+Cuba.settings[:environment][:css_compressor] = :scss
 module Cuba::Assets
   def asset(path)
     environment[path]
@@ -23,8 +26,8 @@ module Cuba::Assets
     environment.append_path "#{assets_dir}/fonts"
     environment.append_path "#{assets_dir}/images"
 
-    # environment.js_compressor  = :uglify
-    environment.css_compressor = :scss
+    environment.js_compressor  = Cuba.settings[:environment][:js_compressor]
+    environment.css_compressor = Cuba.settings[:environment][:css_compressor]
 
     environment
   end
