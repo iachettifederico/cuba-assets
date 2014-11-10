@@ -51,8 +51,19 @@ This will return an instance of `Sprockets::BundledAsset`.
 To change the assets directory, just set it on the `settings` hash.
 
 ```ruby
-Cuba.settings[:assets][:js_compressor]  = nil
+Cuba.settings[:assets][:assets_dir]  = nil
 ```
+
+### Changing the JS and CSS compressors
+
+To change the compressors, add the following lines:
+
+```ruby
+Cuba.settings[:assets][:css_compressor]  = :uglify
+Cuba.settings[:assets][:js_compressor]   = :scss
+```
+
+Take notice that `:uglify` and `:scss` are the default values.
 
 ## Contributing
 
