@@ -3,8 +3,8 @@ require "sprockets"
 
 Cuba.settings[:assets_dir] = "assets/"
 
-Cuba.settings[:environment][:js_compressor]  = :uglify
-Cuba.settings[:environment][:css_compressor] = :scss
+Cuba.settings[:js_compressor]  = :uglify
+Cuba.settings[:css_compressor] = :scss
 module Cuba::Assets
   def asset(path)
     environment[path]
