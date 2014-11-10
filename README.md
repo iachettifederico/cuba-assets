@@ -18,9 +18,31 @@ Or install it yourself as:
 
     $ gem install cuba-assets
 
+## Why Cuba::Assets?
+
+Adding Sprockets to Cuba isn't a hard task. It only takes a little boilerplate to get it set up.
+This gem just takes that boilerplate out of sight.
+
 ## Usage
 
-TODO: Write usage instructions here
+The first order of business is requiring the plugin and making it available.
+
+```ruby
+require "cuba/assets"
+Cuba.plugin Cuba::Assets
+```
+
+This assumes that you have the following directories in place:
+
+- `<assets_dir>/javascripts`
+- `<assets_dir>/styles`
+- `<assets_dir>/fonts`
+- `<assets_dir>/images`
+
+Where `<assets_dir>` is, by default: `<app_dir>/assets`
+
+With that in place, you can now use the `asset` helper, passing the desired asset's path.
+This will return an instance of `Sprockets::BundledAsset`.
 
 ## Contributing
 
