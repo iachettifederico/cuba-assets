@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "cuba-assets"
-  spec.version       = "0.0.3"
+  spec.version       = "0.0.4"
   spec.authors       = ["Federico Iachetti"]
   spec.email         = ["iachetti.federico@gmail.com"]
   spec.summary       = %q{Asset pipeline for Cuba.}
